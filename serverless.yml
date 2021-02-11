@@ -1,0 +1,11 @@
+service: thingsboard-nodejs
+
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+functions:
+  send-thingsboard:
+    handler: handler.handler
