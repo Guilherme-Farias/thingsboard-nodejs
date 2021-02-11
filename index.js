@@ -35,7 +35,7 @@ const telemetry = [
 // Para rodar: 
 // >> node index.js
 telemetry.map(station => {
-    axios.post(`http://demo.thingsboard.io/api/v1/${stations.get(station.name)}/telemetrys`,
+    axios.post(`http://demo.thingsboard.io/api/v1/${stations.get(station.name)}/telemetry`,
         {
             heat_index: station.heatIndex,
             warning_msg: station.warning
