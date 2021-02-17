@@ -16,11 +16,11 @@ exports.handler = async (event) => {
       const celsius = Math.round((((heatIndex - 32) / 1.8) + Number.EPSILON) * 100) / 100
       if (celsius <= 27.0) {
         warning = "Normal"
-      } else if (celsius >= 27.0 & celsius <= 32.0) {
+      } else if (celsius > 27.0 && celsius <= 32.0) {
         warning = "Caution"
-      } else if (celsius >= 32.1 & celsius <= 41.0) {
+      } else if (celsius > 32.0 && celsius <= 41.0) {
         warning = "Extreme caution"
-      } else if (celsius >= 41.1 & celsius <= 54.0) {
+      } else if (celsius > 41.0 && celsius <= 54.0) {
         warning = "Danger"
       } else {
         warning = "Extreme danger"
